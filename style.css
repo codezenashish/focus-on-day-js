@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #48a30012;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding-inline: 16px;
+}
+
+.main-heading {
+  color: #48a300;
+  font-size: 4rem;
+  padding-bottom: 0.5em;
+}
+
+.main-heading-to {
+  color: #61481c;
+}
+
+.main-container {
+  background-color: #ffffff;
+  max-width: 950px;
+  width: 100%;
+  padding: 16px;
+  border-radius: 15px;
+}
+.dayname {
+  font-size: 2em;
+}
+
+.task-complete-bar{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-top: 2em;
+}
+
+.task-bar-heading {
+    font-size: 14px;
+    color: #858585;
+    font-weight: 500;
+}
+
+.task-bar{
+    background-color: #48A3001A;
+    height: 1.5em;
+    border-radius: 50px;
+    overflow: hidden;
+}
+.taskbar-color{
+    /* background-color: #48a300; */
+    height: 100%;
+    width: 30%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-inline-start: 16px;
+
+}
+
+.taskbar-color span{
+    font-size: 10px;
+    color: #EEFFE0;
+    font-weight: 700;
+}
+
+.add-task{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    margin-top: 2em;
+}
+
+.task-status{
+    font-size: 14px;
+    color: #FF5151;
+    font-weight: 400;
+}
+
+
+.task{
+    padding: 16px;
+    border: #48a300 3px solid;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+}
+
+
+.task input[type="radio"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #48a300;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.task input[type="radio"]:checked {
+    background-color: #48a300;
+    border-color: #48a300;
+}
+
+.task input[type="radio"]:checked::after {
+    content: "✓";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.task label {
+    color: #48a300;
+    font-weight: 500;
+    user-select: none;
+    cursor: pointer;
+}
+
+
+.task-opt-hov {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.task-opt-hov:hover {
+    transform: translateY(-3px);
+    /* box-shadow: 0 8px 25px rgba(72, 163, 0, 0.2); */
+    border-color: #3d8a00;
+    /* background-color: rgba(72, 163, 0, 0.05); */
+}
+
